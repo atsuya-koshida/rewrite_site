@@ -3,456 +3,332 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>越田敦也 - パーソナルトレーナー</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8NKWHDM7PB"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-8NKWHDM7PB');
-    </script>
-    <style>
-        body {
-            font-family: 'Noto Sans JP', sans-serif;
-        }
-        .fade-in {
-            animation: fadeIn 0.8s ease-in;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('img/personal_1.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center 10%;
-            background-attachment: fixed;
-        }
-        @media (max-width: 640px) {
-            .hero-bg {
-                background-attachment: scroll;
-                background-position: center center;
-            }
-        }
-        .section {
-            display: none;
-        }
-        .section.active {
-            display: block;
-        }
-        .nav-link {
-            transition: all 0.3s ease;
-        }
-        .nav-link:hover {
-            color: #3b82f6;
-            transform: translateY(-2px);
-        }
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        .testimonial-slide {
-            display: none;
-            animation: slideIn 0.5s ease-in-out;
-        }
-        .testimonial-slide.active {
-            display: block;
-        }
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateX(50px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-        }
-        .accordion-content.active {
-            max-height: 1000px;
-        }
-        .mobile-menu {
-            transform: translateX(100%);
-            transition: transform 0.3s ease-in-out;
-        }
-        .mobile-menu.active {
-            transform: translateX(0);
-        }
-        .hero-gradient {
-            background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%);
-        }
-        
-        .contact-card {
-            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            border: 1px solid rgba(226, 232, 240, 0.8);
-            transition: all 0.3s ease;
-        }
-        
-        .contact-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
-        }
-        
-        .btn-instagram {
-            background: linear-gradient(45deg, #E4405F, #F56040, #FCAF45);
-            transition: all 0.3s ease;
-        }
-        
-        .btn-instagram:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(228, 64, 95, 0.3);
-        }
-        
-        .btn-line {
-            background: linear-gradient(45deg, #00B900, #00C300);
-            transition: all 0.3s ease;
-        }
-        
-        .btn-line:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0, 185, 0, 0.3);
-        }
-        
-        .qr-placeholder {
-            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-            /* border: 2px dashed #cbd5e1; */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #64748b;
-            font-size: 0.875rem;
-            text-align: center;
-        }
-        
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeIn 0.8s ease-out forwards;
-        }
-        
-        .fade-in:nth-child(1) { animation-delay: 0.1s; }
-        .fade-in:nth-child(2) { animation-delay: 0.2s; }
-        .fade-in:nth-child(3) { animation-delay: 0.3s; }
-        .fade-in:nth-child(4) { animation-delay: 0.4s; }
-        
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .icon-bounce {
-            animation: bounce 2s infinite;
-        }
-        
-        @keyframes bounce {
-            0%, 20%, 53%, 80%, 100% {
-                transform: translate3d(0,0,0);
-            }
-            40%, 43% {
-                transform: translate3d(0,-10px,0);
-            }
-            70% {
-                transform: translate3d(0,-5px,0);
-            }
-            90% {
-                transform: translate3d(0,-2px,0);
-            }
-        }
-
-        .footer-gradient {
-            background: linear-gradient(135deg, #1f2937 0%, #111827 50%, #0f172a 100%);
-        }
-        
-        .footer-link {
-            transition: all 0.3s ease;
-            position: relative;
-        }
-        
-        .footer-link:hover {
-            color: #3b82f6;
-            transform: translateX(5px);
-        }
-        
-        .footer-link::before {
-            content: '';
-            position: absolute;
-            left: -15px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 0;
-            height: 2px;
-            background: #3b82f6;
-            transition: width 0.3s ease;
-        }
-        
-        .footer-link:hover::before {
-            width: 10px;
-        }
-        
-        .social-icon {
-            transition: all 0.3s ease;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-        }
-        
-        .social-icon:hover {
-            transform: translateY(-3px) scale(1.1);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-        
-        .instagram-hover:hover {
-            background: linear-gradient(45deg, #E4405F, #F56040, #FCAF45);
-        }
-        
-        .line-hover:hover {
-            background: #00B900;
-        }
-        
-        .email-hover:hover {
-            background: #ea4335;
-        }
-        
-        .phone-hover:hover {
-            background: #10b981;
-        }
-        
-        .footer-section {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-        
-        .footer-section:nth-child(1) { animation-delay: 0.1s; }
-        .footer-section:nth-child(2) { animation-delay: 0.2s; }
-        .footer-section:nth-child(3) { animation-delay: 0.3s; }
-        .footer-section:nth-child(4) { animation-delay: 0.4s; }
-        
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .pulse-icon {
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.7;
-            }
-        }
-        
-        .footer-divider {
-            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.5), transparent);
-        }
-        
-        .contact-item {
-            transition: all 0.3s ease;
-        }
-        
-        .contact-item:hover {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 8px;
-            padding: 8px;
-            margin: -8px;
-        }
-    </style>
+    <title>Rewrite - 習慣改変プログラム＆パーソナルトレーニング</title>
+    <meta name="description" content="自走を作る、人生最後のパーソナル。3ヶ月で習慣を書き換え、理想の自分に向かう力を獲得。50%OFFモニター募集中！">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-50">
-    <!-- ヘッダー -->
-    <div id="header-placeholder"></div>
+<body>
+    <!-- ナビゲーション -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Rewrite</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">ホーム</a></li>
+                <li class="dropdown">
+                    <a href="rewrite.html" class="nav-link">サービス</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="rewrite.html">Rewrite習慣改変プログラム</a></li>
+                        <li><a href="personal-training.html">パーソナルトレーニング</a></li>
+                    </ul>
+                </li>
+                <li><a href="philosophy.html" class="nav-link">理念</a></li>
+                <li><a href="about.html" class="nav-link">プロフィール</a></li>
+                <li><a href="access.html" class="nav-link">料金</a></li>
+                <li><a href="faq.html" class="nav-link">よくある質問</a></li>
+                <li><a href="contact.html" class="nav-link">お問い合わせ</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
 
-    <!-- メインコンテンツ -->
-    <main class="pt-20">
-        <!-- ホームセクション -->
-        <section id="home" class="section active"></section>
+    <!-- ヒーローセクション -->
+    <section class="hero">
+        <div class="hero-background">
+            <img src="img/personal_1.jpg" alt="プロフェッショナルなパーソナルトレーニング環境" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-main">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line-1">自走を作る</span>
+                        <span class="title-line-2">人生最後のパーソナル</span>
+                    </h1>
+                    <p class="hero-subtitle">3ヶ月で習慣を書き変え、自分の理想を自分で叶える力を手に入れる</p>
+                </div>
 
-        <!-- プラン・料金セクション -->
-        <section id="plans" class="section"></section>
+                <!-- CTAエリア -->
+                <div class="hero-cta-area">
+                    <a href="https://timerex.net/s/koshi0845_8dd7/eec0f1c3" class="cta-button-hero pulse" target="_blank" rel="noopener noreferrer">
+                        <span class="cta-main-text">無料カウンセリング予約</span>
+                        <span class="cta-sub-text">2時間完全無料</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- モニター募集バナー -->
+            <div class="monitor-banner-hero">
+                <div class="banner-header">
+                    <div class="limited-badge">限定5名様</div>
+                    <div class="discount-badge-large">50%OFF</div>
+                </div>
+                <h3 class="banner-title">Rewriteハイブリッドプラン<br><span class="accent">モニター募集中！</span></h3>
+                <div class="price-comparison">
+                    <div class="price-row">
+                        <span class="price-label">通常価格</span>
+                        <span class="original-price-large">¥66,000/月</span>
+                    </div>
+                    <div class="price-arrow">↓</div>
+                    <div class="price-row main">
+                        <span class="price-label special">モニター価格</span>
+                        <span class="monitor-price-large">¥33,000/月</span>
+                    </div>
+                </div>
+                <p class="urgency-text">今だけ特別価格でご提供</p>
+            </div>
+        </div>
+    </section>
 
-        <!-- 習慣改変プログラム詳細 -->
-        <section id="habit-program" class="section"></section>
+    <!-- プロフィールセクション -->
+    <section class="profile-section">
+        <div class="container">
+            <div class="profile-content">
+                <div class="profile-header">
+                    <div class="profile-image">
+                        <img src="img/profile.jpg" alt="越田敦也 プロフィール写真">
+                    </div>
+                    <div class="profile-basic-info">
+                        <h2>越田 敦也</h2>
+                        <p class="profile-title">NSCA-CPT 認定パーソナルトレーナー</p>
+                        <p class="profile-mission">自走を生み出すトレーナー</p>
+                    </div>
+                </div>
+                <div class="profile-info">
+                    
+                    <div class="profile-philosophy">
+                        <h3>私の想い</h3>
+                        <div class="philosophy-vision">
+                            <h4>「人生で最後のパーソナルトレーニング」を提供したい。</h4>
+                            <p>
+                                私と関わるのは、たった3ヶ月かもしれません。<br>
+                                でもその3ヶ月を、あなたにとって<strong>「人生最後のパーソナルトレーニング」</strong>にしたい。<br>
+                                私の手を離れたあとも、理想に向かって進み続けられる自分になってほしい。
+                            </p>
+                        </div>
+                        
+                        <div class="philosophy-approach">
+                            <h4>99.4%の日常をサポート</h4>
+                            <p>
+                                週1回のパーソナルは週168時間のうちたった0.6%。<br>
+                                本当の変化は、<strong>残りの99.4%の日常</strong>で決まります。<br>
+                                Rewriteは、その日常までサポートします。
+                            </p>
+                        </div>
+                        
+                        <div class="philosophy-training">
+                            <h4>基本に忠実な「身体の使い方」を学ぶ</h4>
+                            <p>
+                                奇をてらったメニューではなく、<strong>基本に忠実なトレーニング</strong>で、正しく使える身体をつくる。<br>
+                                「できるようになるまでのプロセス」をパーソナルにして、一生使えるスキルを身につけていただきます。
+                            </p>
+                        </div>
+                        
+                        <div class="profile-mission-expanded">
+                            <p class="mission-statement">
+                                <strong>「分かっているのに、できない」から卒業し、<br>
+                                自分を変え続けられる力を身につける。</strong><br>
+                                それが、私の使命です。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- パーソナルトレーニング詳細 -->
-        <section id="personal-training" class="section"></section>
+    <!-- サービス紹介セクション -->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-title">サービス紹介</h2>
+            
+            <!-- Rewrite習慣改変プログラム -->
+            <div class="service-category">
+                <div class="service-header">
+                    <h3>Rewrite習慣改変プログラム</h3>
+                    <p class="service-description">「分かっているのに、できない」から卒業し、自分を変え続けられる力を身につける3ヶ月プログラム</p>
+                </div>
+                <div class="service-plans">
+                    <div class="plan-card">
+                        <h4>オンラインプラン</h4>
+                        <div class="plan-price">¥33,000/月</div>
+                        <ul class="plan-features">
+                            <li>初回カウンセリング（2時間）</li>
+                            <li>週1回オンラインコーチング</li>
+                            <li>毎日のチャットサポート</li>
+                            <li>3ヶ月契約</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="plan-card">
+                        <div class="plan-badges">
+                            <span class="badge popular">最人気</span>
+                        </div>
+                        <h4>ハイブリッドプラン</h4>
+                        <div class="plan-price">¥66,000/月</div>
+                        <ul class="plan-features">
+                            <li>オンラインプランのすべて</li>
+                            <li>週1回の対面パーソナルトレーニング</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-action">
+                    <a href="rewrite.html" class="service-detail-btn">
+                        <span class="btn-text">詳細を見る</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- パーソナルトレーニングプラン -->
+            <div class="service-category">
+                <div class="service-header">
+                    <h3>パーソナルトレーニングプラン</h3>
+                    <p class="service-description">基本に忠実なトレーニングで、一生使える身体の使い方を学ぶ完全個別指導</p>
+                </div>
+                <div class="training-plans">
+                    <div class="training-plan">
+                        <span class="plan-name">単発</span>
+                        <span class="training-plan-price">¥8,000</span>
+                    </div>
+                    <div class="training-plan">
+                        <span class="plan-name">月4回</span>
+                        <span class="training-plan-price">¥28,000  <small>(¥7,000/回)</small></span>
+                    </div>
+                    <div class="training-plan">
+                        <span class="plan-name">月8回</span>
+                        <span class="training-plan-price">¥52,000  <small>(¥6,500/回)</small></span>
+                    </div>
+                </div>
+                <div class="service-action">
+                    <a href="personal-training.html" class="service-detail-btn">
+                        <span class="btn-text">詳細を見る</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- ご利用の流れ -->
-        <section id="flow" class="section"></section>
+    <!-- SNS・お問い合わせセクション -->
+    <section class="main-contact-section">
+        <div class="container">
+            <h2 class="section-title">SNS・お問い合わせ</h2>
+            <div class="contact-methods-grid">
+                <!-- Instagram -->
+                <div class="contact-method-card instagram">
+                    <div class="method-icon-wrapper">
+                        <div class="method-icon-circle instagram-gradient">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                    <h3>Instagram</h3>
+                    <div class="method-details">
+                        <p class="method-description">
+                            日々のトレーニング風景や習慣改変のヒントを投稿しています。<br>
+                            DMでお気軽にご質問やご相談をお送りください。
+                        </p>
+                    </div>
+                    
+                    <div class="qr-code-display">
+                        <img src="img/instagram_qr.png" alt="Instagram QRコード" class="qr-image">
+                    </div>
+                    
+                    <a href="https://www.instagram.com/atsuya_koshida/" class="contact-btn instagram" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                        InstagramでDM
+                    </a>
+                </div>
 
-        <!-- お客様の声・変化の実例 -->
-        <section id="results" class="section"></section>
+                <!-- LINE -->
+                <div class="contact-method-card line">
+                    <div class="method-icon-wrapper">
+                        <div class="method-icon-circle line-gradient">
+                            <i class="fab fa-line"></i>
+                        </div>
+                    </div>
+                    <h3>公式LINE</h3>
+                    <div class="method-details">
+                        <p class="method-description">
+                            より詳しいご相談や無料カウンセリングのご予約は<br>
+                            公式LINEからが便利です。お気軽にメッセージください。
+                        </p>
+                    </div>
+                    
+                    <div class="qr-code-display">
+                        <img src="img/line_qr.png" alt="LINE QRコード" class="qr-image">
+                    </div>
+                    
+                    <a href="https://lin.ee/PDSiJrJ" class="contact-btn line-btn" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-line"></i>
+                        LINEでメッセージ
+                    </a>
+                </div>
 
-        <!-- トレーナープロフィール -->
-        <section id="profile" class="section"></section>
-
-        <!-- プログラムに込めた想い -->
-        <section id="philosophy" class="section"></section>
-
-        <!-- 実施場所・アクセス情報 -->
-        <section id="access" class="section"></section>
-
-        <!-- FAQ -->
-        <section id="faq" class="section"></section>
-
-        <!-- お問い合わせ -->
-        <section id="contact" class="section"></section>
-    </main>
+                <!-- 無料カウンセリング -->
+                <div class="contact-method-card primary">
+                    <div class="method-icon-wrapper">
+                        <div class="method-icon-circle primary-gradient">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                    </div>
+                    <h3>無料カウンセリング予約</h3>
+                    <div class="method-details">
+                        <p class="method-time">2時間・完全無料</p>
+                        <p class="method-description">オンラインで実施。あなたの目標と現状を詳しくお聞きし、最適なプランをご提案します。</p>
+                    </div>
+                    <a href="https://timerex.net/s/koshi0845_8dd7/eec0f1c3" class="contact-btn primary" target="_blank" rel="noopener noreferrer">
+                        今すぐ予約する
+                    </a>
+                    <p class="method-note">※24時間いつでも予約可能・即座に確定</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- フッター -->
-    <footer id="footer"></footer>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Rewrite</h3>
+                    <p>自走を作る、人生最後のパーソナル</p>
+                </div>
+                <div class="footer-section">
+                    <h4>ナビゲーション</h4>
+                    <ul>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="rewrite.html">サービス</a></li>
+                        <li><a href="philosophy.html">理念</a></li>
+                        <li><a href="about.html">プロフィール</a></li>
+                        <li><a href="access.html">料金</a></li>
+                        <li><a href="faq.html">よくある質問</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>お問い合わせ</h4>
+                    <p>Email: atsuya.koshida@gmail.com</p>
+                    <p>営業時間: 7:00-23:00 毎日</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Rewrite. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-    <script>
-        // ページ読み込み時に各セクションのコンテンツをフェッチ
-        fetch('home.html')
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById('home').innerHTML = html;
-            });
-        fetch('header.html')
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById('header-placeholder').innerHTML = html;
-            });
-        fetch('plans.html')
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById('plans').innerHTML = html;
-            });
-        fetch('habit_program.html')
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById('habit-program').innerHTML = html;
-            });
-        fetch('personal_training.html')
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById('personal-training').innerHTML = html;
-            });
-        fetch('flow.html')
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById('flow').innerHTML = html;
-            });
-        fetch('results.html')
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById('results').innerHTML = html;
-            });
-        fetch('profile.html')
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById('profile').innerHTML = html;
-            });
-        fetch('philosophy.html')
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById('philosophy').innerHTML = html;
-            });
-        fetch('access.html')
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById('access').innerHTML = html;
-            });
-        fetch('contact.html')
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById('contact').innerHTML = html;
-            });
-        fetch('faq.html')
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById('faq').innerHTML = html;
-            });
-        fetch('footer.html')
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById('footer').innerHTML = html;
-            });
-    </script>
+    <!-- トップへ戻るボタン -->
+    <button id="scrollToTop" class="scroll-to-top">↑</button>
 
-    <script>
-        function showSection(id) {
-            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-            document.getElementById(id).classList.add('active');
-            window.scrollTo(0, 0);
-        }
-
-        function toggleMobileMenu() {
-            document.getElementById('mobileMenu').classList.toggle('active');
-        }
-
-        let currentIndex = 0;
-
-        function showSlide(index) {
-            const slides = document.querySelectorAll('.testimonial-slide');
-            const dots = document.querySelectorAll('.slide-btn');
-            slides.forEach(s => s.classList.remove('active'));
-            dots.forEach(d => {
-                d.classList.remove('bg-blue-600');
-                d.classList.add('bg-gray-300');
-            });
-            if (slides[index]) slides[index].classList.add('active');
-            if (dots[index]) {
-                dots[index].classList.remove('bg-gray-300');
-                dots[index].classList.add('bg-blue-600');
-            }
-        }
-
-        function nextSlide() {
-            const slides = document.querySelectorAll('.testimonial-slide');
-            currentIndex = (currentIndex + 1) % slides.length;
-            showSlide(currentIndex);
-        }
-
-        function prevSlide() {
-            const slides = document.querySelectorAll('.testimonial-slide');
-            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-            showSlide(currentIndex);
-        }
-
-        function currentSlide(n) {
-            currentIndex = n - 1;
-            showSlide(currentIndex);
-        }
-
-        function toggleServiceDropdown(event) {
-            event.preventDefault();
-            const dropdown = document.getElementById('serviceDropdown');
-            dropdown.classList.toggle('hidden');
-        }
-
-        // クリックでメニュー外を押したら閉じる
-        document.addEventListener('click', function (e) {
-            const dropdown = document.getElementById('serviceDropdown');
-            const trigger = e.target.closest('[onclick="toggleServiceDropdown(event)"]');
-            if (!trigger && !dropdown.contains(e.target)) {
-                dropdown.classList.add('hidden');
-            }
-        });
-
-        // results.html読み込み後は「currentIndex」を維持して再描画だけ行う
-        fetch('results.html')
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById('results').innerHTML = html;
-                showSlide(currentIndex);
-            });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
