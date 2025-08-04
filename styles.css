@@ -6430,3 +6430,286 @@ body:has(.training-plans-section) .approach-section .approach-explanation {
         font-size: 2.2rem;
     }
 }
+
+/* ================================
+   対応エリア・施設紹介ページ
+   ================================ */
+
+/* 対応エリアセクション */
+.area-overview-section {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+}
+
+.area-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.area-card {
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.area-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.area-card-header {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--border-gray);
+}
+
+.area-card-header h3 {
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.area-card-header i {
+    color: var(--primary-orange);
+}
+
+.area-list {
+    list-style: none;
+    padding: 0;
+}
+
+.area-list li {
+    padding: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #666;
+    font-size: 1rem;
+}
+
+.area-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-orange);
+    font-weight: bold;
+}
+
+.area-note-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.area-note {
+    display: inline-block;
+    padding: 20px 30px;
+    background: linear-gradient(135deg, rgba(249, 115, 22, 0.05), rgba(220, 38, 38, 0.05));
+    border-radius: 10px;
+    color: #666;
+    font-size: 1.05rem;
+    border: 1px solid rgba(249, 115, 22, 0.2);
+}
+
+.area-note i {
+    color: var(--primary-orange);
+    margin-right: 8px;
+}
+
+/* 施設紹介セクション */
+.facilities-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.facility-card {
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    border: 1px solid var(--border-gray);
+}
+
+.facility-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.facility-card.featured {
+    border: 2px solid transparent;
+    background-image: linear-gradient(white, white), var(--primary-gradient);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.facility-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: var(--primary-gradient);
+    color: var(--white);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.facility-header {
+    margin-bottom: 25px;
+}
+
+.facility-header h3 {
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+    margin-bottom: 8px;
+}
+
+.facility-area {
+    color: #666;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.facility-features {
+    margin-bottom: 25px;
+}
+
+.feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.feature-item i {
+    color: var(--primary-orange);
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
+}
+
+.facility-action {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-gray);
+}
+
+.facility-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary-orange);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: rgba(249, 115, 22, 0.1);
+}
+
+.facility-link:hover {
+    background-color: rgba(249, 115, 22, 0.2);
+    transform: translateX(5px);
+}
+
+/* CTA Section for Facilities */
+.cta-section {
+    background: var(--primary-gradient);
+    padding: 80px 0;
+    text-align: center;
+    color: var(--white);
+}
+
+.cta-title {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.cta-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.95;
+}
+
+.cta-button-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cta-button-primary {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: var(--white);
+    color: var(--primary-orange);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+}
+
+.cta-main-text {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.cta-sub-text {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* レスポンシブデザイン - 施設ページ */
+@media (max-width: 768px) {
+    .area-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .facilities-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .facility-card {
+        padding: 25px;
+    }
+    
+    .cta-title {
+        font-size: 1.8rem;
+    }
+    
+    .cta-subtitle {
+        font-size: 1rem;
+    }
+    
+    .cta-button-primary {
+        padding: 15px 30px;
+    }
+}
