@@ -3,236 +3,297 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>お問い合わせ - Rewrite</title>
-    <meta name="description" content="Rewriteへのお問い合わせ・無料カウンセリング申込はこちら。LINEやメール、お問い合わせフォームで気軽にご相談ください。">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <title>お問い合わせ・ご予約 | 人生最後のパーソナルトレーニング</title>
+    <meta name="description" content="無料カウンセリング予約、LINE・Instagram での相談、体験セッション予約など、お気軽にお問い合わせください。対応エリア・施設情報も掲載。">
+    <meta name="keywords" content="パーソナルトレーニング,予約,無料カウンセリング,LINE,Instagram,渋谷,池袋,新宿,川越,越田敦也">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="お問い合わせ・ご予約 | 人生最後のパーソナルトレーニング">
+    <meta property="og:description" content="無料カウンセリング予約や各種お問い合わせ方法をご案内。LINE・Instagram・直接予約に対応。">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8NKWHDM7PB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-8NKWHDM7PB');
+    </script>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <!-- ナビゲーション -->
+    <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2>Rewrite</h2>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">ホーム</a></li>
-                <li class="dropdown">
-                    <a href="rewrite.html" class="nav-link">サービス</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="rewrite.html">Rewrite習慣改変プログラム</a></li>
-                        <li><a href="personal-training.html">パーソナルトレーニング</a></li>
-                    </ul>
-                </li>
-                <li><a href="philosophy.html" class="nav-link">理念</a></li>
-                <li><a href="about.html" class="nav-link">プロフィール</a></li>
-                <li><a href="access.html" class="nav-link">料金</a></li>
-                <li><a href="area-facilities.html" class="nav-link">施設</a></li>
-                <li><a href="faq.html" class="nav-link">よくある質問</a></li>
-                <li><a href="contact.html" class="nav-link active">お問い合わせ</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+        <div class="container">
+            <div class="nav-container">
+                <div class="nav-logo">越田敦也 PT</div>
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link">ホーム</a>
+                    <a href="services.html" class="nav-link">サービス</a>
+                    <a href="contact.html" class="nav-link active">お問い合わせ</a>
+                </div>
+                <button class="nav-toggle" aria-label="メニューを開く">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </nav>
 
-    <!-- ヘッダーセクション -->
-    <section class="page-header">
+    <!-- Hero Section -->
+    <section class="section page-header">
         <div class="container">
-            <h1>お問い合わせ</h1>
-            <p>ご質問やご相談など、お気軽にお問い合わせください</p>
+            <div class="text-center">
+                <h1 class="hero-title">お問い合わせ・ご予約</h1>
+                <p class="hero-subtitle">お気軽にお問い合わせください</p>
+            </div>
         </div>
     </section>
 
-    <!-- メイン問い合わせセクション -->
-    <section class="main-contact-section">
+    <!-- Contact Methods Section -->
+    <section class="section" style="background-color: var(--bg-secondary);">
         <div class="container">
-            <div class="contact-methods-grid">
+            <h2 class="text-center mb-8">お問い合わせ方法</h2>
+            <div class="contact-grid">
+                
                 <!-- Instagram -->
-                <div class="contact-method-card instagram">
-                    <div class="method-icon-wrapper">
-                        <div class="method-icon-circle instagram-gradient">
-                            <i class="fab fa-instagram"></i>
-                        </div>
+                <div class="contact-card">
+                    <div class="contact-icon instagram">
+                        <i class="fab fa-instagram"></i>
                     </div>
                     <h3>Instagram</h3>
-                    <div class="method-details">
-                        <p class="method-description">
-                            日々のトレーニング風景や習慣改変のヒントを投稿しています。<br>
-                            DMでお気軽にご質問やご相談をお送りください。
-                        </p>
+                    <div style="margin: 1rem 0;">
+                        <p style="font-weight: var(--font-weight-semibold);">@atsuya_koshida</p>
                     </div>
-                    
-                    <div class="qr-code-display">
-                        <img src="img/instagram_qr.png" alt="Instagram QRコード" class="qr-image">
+                    <div style="background: var(--color-gray-50); border-radius: var(--radius-md); padding: 1rem; margin: 1rem 0;">
+                        <h4 style="margin-bottom: 0.5rem;">投稿内容</h4>
+                        <ul style="list-style: none; padding: 0; font-size: var(--font-size-sm);">
+                            <li><i class="fas fa-video"></i> 日々のトレーニング風景</li>
+                            <li><i class="fas fa-lightbulb"></i> フィットネスのヒント</li>
+                            <li><i class="fas fa-heart"></i> モチベーション向上の投稿</li>
+                        </ul>
                     </div>
-                    
-                    <a href="https://www.instagram.com/atsuya_koshida/" class="contact-btn instagram" target="_blank" rel="noopener noreferrer">
+                    <div class="qr-code">
+                        <img src="./img/instagram_qr.png" alt="Instagram QRコード">
+                    </div>
+                    <a href="https://www.instagram.com/atsuya_koshida/" 
+                       class="btn btn-secondary w-full" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
                         <i class="fab fa-instagram"></i>
                         InstagramでDM
                     </a>
                 </div>
 
                 <!-- LINE -->
-                <div class="contact-method-card line">
-                    <div class="method-icon-wrapper">
-                        <div class="method-icon-circle line-gradient">
-                            <i class="fab fa-line"></i>
-                        </div>
+                <div class="contact-card">
+                    <div class="contact-icon line">
+                        <i class="fab fa-line"></i>
                     </div>
                     <h3>公式LINE</h3>
-                    <div class="method-details">
-                        <p class="method-description">
-                            より詳しいご相談や無料カウンセリングのご予約は<br>
-                            公式LINEからが便利です。お気軽にメッセージください。
-                        </p>
+                    <div style="margin: 1rem 0;">
+                        <p style="font-weight: var(--font-weight-semibold);">LINE公式アカウント</p>
                     </div>
-                    
-                    <div class="qr-code-display">
-                        <img src="img/line_qr.png" alt="LINE QRコード" class="qr-image">
+                    <div style="background: var(--color-gray-50); border-radius: var(--radius-md); padding: 1rem; margin: 1rem 0;">
+                        <h4 style="margin-bottom: 0.5rem;">対応内容</h4>
+                        <ul style="list-style: none; padding: 0; font-size: var(--font-size-sm);">
+                            <li><i class="fas fa-comments"></i> 詳しいご相談</li>
+                            <li><i class="fas fa-calendar"></i> 無料カウンセリング予約</li>
+                            <li><i class="fas fa-question-circle"></i> 各種お問い合わせ</li>
+                        </ul>
                     </div>
-                    
-                    <a href="https://lin.ee/PDSiJrJ" class="contact-btn line-btn" target="_blank" rel="noopener noreferrer">
+                    <div class="qr-code">
+                        <img src="./img/line_qr.png" alt="LINE QRコード">
+                    </div>
+                    <a href="https://lin.ee/PDSiJrJ" 
+                       class="btn btn-secondary w-full" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
                         <i class="fab fa-line"></i>
                         LINEでメッセージ
                     </a>
                 </div>
 
-                <!-- 無料カウンセリング -->
-                <div class="contact-method-card primary">
-                    <div class="method-icon-wrapper">
-                        <div class="method-icon-circle primary-gradient">
-                            <i class="fas fa-calendar-alt"></i>
-                        </div>
+                <!-- Free Consultation -->
+                <div class="contact-card" style="border: 2px solid var(--color-accent);">
+                    <div class="contact-icon primary">
+                        <i class="fas fa-calendar-alt"></i>
                     </div>
-                    <h3>無料カウンセリング予約</h3>
-                    <div class="method-details">
-                        <p class="method-time">2時間・完全無料</p>
-                        <p class="method-description">オンラインで実施。あなたの目標と現状を詳しくお聞きし、最適なプランをご提案します。</p>
+                    <h3>無料カウンセリング</h3>
+                    <div style="font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold); color: var(--color-success); margin: 1rem 0;">
+                        完全無料
                     </div>
-                    <a href="https://timerex.net/s/koshi0845_8dd7/eec0f1c3" class="contact-btn primary" target="_blank" rel="noopener noreferrer">
-                        今すぐ予約する
+                    <div style="background: rgba(16, 185, 129, 0.1); border-radius: var(--radius-md); padding: 1rem; margin: 1rem 0;">
+                        <h4 style="margin-bottom: 0.5rem;">内容</h4>
+                        <ul style="list-style: none; padding: 0; font-size: var(--font-size-sm);">
+                            <li><i class="fas fa-clock"></i> オンライン実施</li>
+                            <li><i class="fas fa-target"></i> 目標と現状の詳細分析</li>
+                            <li><i class="fas fa-route"></i> 最適なプランのご提案</li>
+                            <li><i class="fas fa-calendar"></i> 24時間いつでも予約可能</li>
+                        </ul>
+                    </div>
+                    <a href="https://timerex.net/s/koshi0845_8dd7/eec0f1c3" 
+                       class="btn btn-primary w-full" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        無料カウンセリング予約
                     </a>
-                    <p class="method-note">※24時間いつでも予約可能・即座に確定</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 補足情報セクション -->
-    <section class="contact-info-section">
+    <!-- Service Areas Section -->
+    <section class="section" style="background-color: var(--bg-secondary);">
         <div class="container">
-            <div class="info-box">
-                <h3>ご連絡の際のポイント</h3>
-                <div class="info-grid">
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-user-plus"></i>
-                        </div>
-                        <h4>初回の方</h4>
-                        <p>お名前とご興味のあるプログラム（習慣改変・パーソナルトレーニング）をお教えください</p>
+            <h2 class="text-center mb-8">対応エリア・施設</h2>
+            
+            <!-- Service Areas -->
+            <div class="card mb-8">
+                <h3 class="text-center mb-6"><i class="fas fa-map-marker-alt text-accent"></i> 対応エリア</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center;">
+                    
+                    <div>
+                        <h4 style="color: var(--color-accent);">🏙️ 東京都内</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.25rem;">渋谷</li>
+                            <li style="padding: 0.25rem;">恵比寿</li>
+                            <li style="padding: 0.25rem;">中目黒</li>
+                            <li style="padding: 0.25rem;">新宿</li>
+                            <li style="padding: 0.25rem;">新宿御苑</li>
+                            <li style="padding: 0.25rem;">池袋</li>
+                        </ul>
                     </div>
 
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-question-circle"></i>
-                        </div>
-                        <h4>ご質問のある方</h4>
-                        <p>どんな些細なことでもお気軽に！料金やプログラム内容など何でもOKです</p>
+                    <div>
+                        <h4 style="color: var(--color-success);">🌸 埼玉県</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.25rem;">川越</li>
+                            <li style="padding: 0.25rem;">南浦和</li>
+                        </ul>
                     </div>
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <h4>まずは相談したい方</h4>
-                        <p>現在のお悩みや理想の状態を簡単にお聞かせください</p>
+
+                    <div>
+                        <h4 style="color: var(--color-accent);">📍 その他</h4>
+                        <p style="font-size: var(--font-size-sm);">
+                            上記以外のエリアも<br>
+                            ご相談可能です
+                        </p>
+                        <p style="font-size: var(--font-size-sm); color: var(--text-muted);">
+                            都内・埼玉の個室レンタルジムを<br>
+                            幅広く利用
+                        </p>
                     </div>
                 </div>
+            </div>
+
+            <!-- Facilities -->
+            <div class="card-grid">
+                <!-- BODY R GYM -->
+                <div class="card">
+                    <h3><i class="fas fa-dumbbell text-accent"></i> BODY R GYM</h3>
+                    <div style="margin: 1rem 0;">
+                        <p style="font-weight: var(--font-weight-semibold);">渋谷・池袋・新宿</p>
+                    </div>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check text-success"></i> 完全個室</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check text-success"></i> 無料レンタルシューズ</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check text-success"></i> 駅近</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check text-success"></i> 最新設備完備</li>
+                    </ul>
+                </div>
+
+                <!-- RAZER GYM -->
+                <div class="card">
+                    <h3><i class="fas fa-dumbbell text-accent"></i> RAZER GYM</h3>
+                    <div style="margin: 1rem 0;">
+                        <p style="font-weight: var(--font-weight-semibold);">新宿御苑</p>
+                    </div>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check text-success"></i> 完全個室</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check text-success"></i> 無料レンタルシューズ</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check text-success"></i> 駅近</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check text-success"></i> 静かな環境</li>
+                    </ul>
+                </div>
+
+                <!-- Other Facilities -->
+                <div class="card">
+                    <h3><i class="fas fa-building text-accent"></i> その他施設</h3>
+                    <div style="margin: 1rem 0;">
+                        <p style="font-weight: var(--font-weight-semibold);">川越・南浦和エリア</p>
+                    </div>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check text-success"></i> 個室レンタルジム</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check text-success"></i> プライベート空間</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check text-success"></i> 清潔な設備</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check text-success"></i> アクセス良好</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="background: var(--color-gray-50); border-radius: var(--radius-lg); padding: 2rem; margin-top: 2rem; text-align: center;">
+                <h4 style="margin-bottom: 1rem;">🔒 完全個室でのトレーニング</h4>
+                <p>すべての施設で完全個室を利用するため、他の人の目を気にすることなく、集中してトレーニングに取り組めます。</p>
+                <p class="text-small text-muted">施設の詳細や具体的な場所については、予約時にご案内いたします。</p>
             </div>
         </div>
     </section>
 
-    <!-- よくある質問へのリンク -->
-    <section class="faq-link-section">
-        <div class="container">
-            <div class="faq-link-box">
-                <h2>よくある質問</h2>
-                <p>お客様からよくいただく質問をまとめました。サービス内容、料金、実施方法などについて詳しくお答えしています。</p>
-                <a href="faq.html" class="faq-link-button">よくある質問ページへ</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- SNS・その他の連絡先
-    <section class="social-contact-section">
-        <div class="container">
-            <h2 class="section-title">SNS・その他の連絡先</h2>
-            <div class="social-grid">
-                <div class="social-item">
-                    <div class="social-icon">📸</div>
-                    <h3>Instagram</h3>
-                    <p>@atsuya_koshida</p>
-                    <p>日々のトレーニング投稿やヒントを発信中</p>
-                    <a href="https://instagram.com/atsuya_koshida" class="social-btn instagram" target="_blank" rel="noopener noreferrer">フォローする</a>
-                </div>
-                
-                <div class="social-item">
-                    <div class="social-icon">🐦</div>
-                    <h3>X (Twitter)</h3>
-                    <p>@atsuya_koshida</p>
-                    <p>習慣改変のコツや最新情報をツイート</p>
-                    <a href="https://x.com/atsuya_koshida" class="social-btn twitter" target="_blank" rel="noopener noreferrer">フォローする</a>
-                </div>
-                
-                <div class="social-item">
-                    <div class="social-icon">📺</div>
-                    <h3>YouTube</h3>
-                    <p>準備中</p>
-                    <p>トレーニング動画や習慣改変のノウハウを配信予定</p>
-                    <a href="#" class="social-btn youtube disabled">近日公開</a>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- フッター -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Rewrite</h3>
-                    <p>自走を作る、人生最後のパーソナル</p>
+                    <h3>Personal Training</h3>
+                    <p>人生最後のパーソナルトレーニング</p>
+                    <p>基本に忠実なトレーニングで、一生使える身体の使い方を学ぶ</p>
                 </div>
                 <div class="footer-section">
                     <h4>ナビゲーション</h4>
-                    <ul>
-                        <li><a href="index.html">ホーム</a></li>
-                        <li><a href="rewrite.html">サービス</a></li>
-                        <li><a href="philosophy.html">理念</a></li>
-                        <li><a href="about.html">プロフィール</a></li>
-                        <li><a href="access.html">料金</a></li>
-                        <li><a href="area-facilities.html">施設</a></li>
-                        <li><a href="contact.html">お問い合わせ</a></li>
-                    </ul>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <a href="index.html">ホーム</a>
+                        <a href="services.html">サービス</a>
+                        <a href="contact.html">お問い合わせ</a>
+                    </div>
                 </div>
                 <div class="footer-section">
                     <h4>お問い合わせ</h4>
                     <p>Email: atsuya.koshida@gmail.com</p>
-                    <p>営業時間: 7:00-23:00 毎日</p>
+                    <p>営業時間: 7:00-22:00 毎日</p>
+                    <div style="margin-top: 1rem;">
+                        <a href="https://www.instagram.com/atsuya_koshida/" target="_blank" rel="noopener noreferrer" style="margin-right: 1rem;">
+                            <i class="fab fa-instagram" style="font-size: 1.5rem;"></i>
+                        </a>
+                        <a href="https://lin.ee/PDSiJrJ" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-line" style="font-size: 1.5rem;"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Rewrite. All rights reserved.</p>
+                <p>&copy; 2025 越田敦也 Personal Training. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- トップへ戻るボタン -->
-    <button id="scrollToTop" class="scroll-to-top">↑</button>
+    <!-- Add flex-1 utility class -->
+    <style>
+        .flex-1 { flex: 1; }
+    </style>
 
-    <script src="script.js"></script>
+    <!-- JavaScript -->
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>
