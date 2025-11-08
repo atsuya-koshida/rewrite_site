@@ -1,0 +1,13 @@
+{
+  "name": "personal-training-site",
+  "version": "1.0.0",
+  "description": "パーソナルトレーニングサイト - 画像最適化ツール",
+  "scripts": {
+    "optimize-images": "node optimize-images.js"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.0"
+  },
+  "author": "越田敦也",
+  "license": "MIT"
+}
