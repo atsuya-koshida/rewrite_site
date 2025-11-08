@@ -3,279 +3,703 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="人生最後のパーソナルトレーニング。長くても半年で、トレーナーに頼らず自分で続けられる状態へ。越田敦也のパーソナルトレーニングサービス">
+    <meta name="keywords" content="パーソナルトレーニング,渋谷,恵比寿,新宿,池袋,川越,南浦和,越田敦也">
     <title>人生最後のパーソナルトレーニング | 越田敦也</title>
-    <meta name="description" content="NSCA-CPT認定パーソナルトレーナー越田敦也による「人生最後のパーソナルトレーニング」。半年で自走できる状態へ。基本に忠実なトレーニングで一生使える身体の使い方を学ぶ。">
-    <meta name="keywords" content="パーソナルトレーニング,越田敦也,NSCA-CPT,東京,埼玉,渋谷,池袋,新宿,川越">
-    
-    <!-- Open Graph / Social Media -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="人生最後のパーソナルトレーニング | 越田敦也">
-    <meta property="og:description" content="半年で自走できる状態へ。基本に忠実なトレーニングで一生使える身体の使い方を学ぶパーソナルトレーニング。">
-    <meta property="og:image" content="./img/personal_1.jpg">
-    
-    <!-- Preconnect for performance -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://www.googletagmanager.com">
-    
-    <!-- Google Analytics -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8NKWHDM7PB"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
+
         gtag('config', 'G-8NKWHDM7PB');
     </script>
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="./assets/css/main.css">
-    
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+    <!-- Loading Animation -->
+    <div class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Fixed Header -->
+    <header class="header" id="header">
         <div class="container">
-            <div class="nav-container">
-                <div class="nav-logo">越田敦也 PT</div>
-                <div class="nav-menu">
-                    <a href="index.html" class="nav-link active">ホーム</a>
-                    <a href="services.html" class="nav-link">サービス</a>
-                    <a href="contact.html" class="nav-link">お問い合わせ</a>
-                </div>
-                <button class="nav-toggle" aria-label="メニューを開く">
+            <div class="header-content">
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li><a href="#concept" class="nav-link">コンセプト</a></li>
+                        <li><a href="#pricing" class="nav-link">料金プラン</a></li>
+                        <li><a href="#service" class="nav-link">サービス</a></li>
+                        <li><a href="#trainer" class="nav-link">トレーナー</a></li>
+                        <li><a href="#voice" class="nav-link">お客様の声</a></li>
+                        <li><a href="#faq" class="nav-link">FAQ</a></li>
+                        <li><a href="#contact" class="nav-link">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+                <button class="hamburger" id="hamburger" aria-label="メニュー">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
             </div>
         </div>
-    </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-background">
-            <img src="./img/personal_1.jpg" alt="プロフェッショナルなパーソナルトレーニング環境" class="hero-image">
-            <div class="hero-overlay"></div>
-        </div>
-        
+    <section class="hero" id="hero">
+        <div class="hero-background"></div>
         <div class="hero-content">
-            <div class="container">
-                <h1 class="hero-title">
-                    人生最後の<br>
-                    パーソナルトレーニング
-                </h1>
-                <p class="hero-subtitle">
-                    長くても半年で、トレーナーに頼らず<br>
-                    自分で続けられる状態へ
-                </p>
-                
-                <div class="hero-cta">
-                    <a href="https://timerex.net/s/koshi0845_8dd7/eec0f1c3" 
-                       class="btn btn-primary btn-xl pulse" 
-                       target="_blank" 
-                       rel="noopener noreferrer">
-                        <i class="fas fa-calendar-alt"></i>
-                        無料カウンセリング予約
-                    </a>
-                    <a href="services.html" class="btn btn-secondary btn-large">
-                        <i class="fas fa-dumbbell"></i>
-                        サービス詳細
-                    </a>
-                </div>
+            <h1 class="hero-title fade-in-up">
+                人生最後の<br>
+                <span class="hero-title-accent">パーソナルトレーニング</span>
+            </h1>
+            <p class="hero-subtitle fade-in-up delay-1">
+                トレーナーに頼らず<br class="sp-only">自ら変われる自分へ
+            </p>
+            <div class="hero-buttons fade-in-up delay-2">
+                <a href="#contact" class="btn btn-primary btn-large">無料カウンセリングを予約</a>
+                <a href="#pricing" class="btn btn-outline btn-large">料金プランを見る</a>
             </div>
+        </div>
+        <div class="scroll-down">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
         </div>
     </section>
 
-    <!-- Special Offer Section -->
-    <section class="section">
+    <!-- Concept Section -->
+    <section class="section concept-section" id="concept">
         <div class="container">
-            <h2 class="text-center mb-8">キャンペーン</h2>
-            <div class="special-offer">
-                <div class="offer-badge">限定募集中</div>
-                <h2 class="offer-title">1ヶ月間お試しプラン</h2>
-                <div class="price-comparison">
-                    <div class="original-price">通常価格 ¥40,000/月</div>
-                    <div class="special-price">お試し価格 ¥30,000/月</div>
-                </div>
-                <p class="text-large">
-                    パーソナルトレーニング4回 + 食事指導 + オンラインサポート + コーチング2回
-                </p>
-                <a href="contact.html" 
-                   class="btn btn-secondary btn-large mt-4">
-                    相談する
-                </a>
+            <div class="section-header">
+                <h2 class="section-title">私のパーソナルの特徴</h2>
+                <p class="section-subtitle">自走を目指した徹底サポート</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Service Overview Section -->
-    <section class="section">
-        <div class="container">
-            <h2 class="text-center mb-8">サービス概要</h2>
-            <div class="card-grid">
-                <!-- Single Session -->
-                <div class="card">
-                    <h3>単発プラン</h3>
-                    <div style="font-size: var(--font-size-3xl); font-weight: var(--font-weight-bold); color: var(--color-accent); margin: 1rem 0;">
-                        ¥8,000
+            <div class="concept-grid">
+                <div class="concept-card">
+                    <div class="concept-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="30" cy="30" r="28" stroke="currentColor" stroke-width="2"/>
+                            <path d="M30 15V30L40 35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
                     </div>
-                    <p class="text-small text-muted">60分・都度払い</p>
-                    <ul style="list-style: none; padding: 0; margin: 1rem 0;">
-                        <li><i class="fas fa-check text-success"></i> マンツーマンセッション</li>
-                        <li><i class="fas fa-check text-success"></i> 個別メニュー作成</li>
-                        <li><i class="fas fa-check text-success"></i> フォームチェック</li>
+                    <h3 class="concept-title">卒業できる</h3>
+                    <p class="concept-text">
+                        あなたが自ら理想の身体を作り続けられるようになるまで徹底サポート。長く通い続けてもらうのではなく、卒業していただくのが私の使命です。
+                    </p>
+                </div>
+                <div class="concept-card">
+                    <div class="concept-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M30 10L35 25H50L38 35L43 50L30 40L17 50L22 35L10 25H25L30 10Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="concept-title">
+                        全プラン<br>
+                        オンラインサポート付き
+                        <span class="concept-note">※単発パーソナルを除く</span>
+                    </h3>
+                    <p class="concept-text">
+                        週1回1時間のトレーニング。これは1週間の内のたった0.6%に過ぎません。身体を変えるには、残りの99.4%の日常を変えることが不可欠です。<br>
+                        だからこそ、全プランにオンラインサポートが付いています。オフライン・オンライン両面であなたを徹底的に支えます。
+                    </p>
+                </div>
+                <div class="concept-card">
+                    <div class="concept-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="15" y="15" width="30" height="30" stroke="currentColor" stroke-width="2"/>
+                            <path d="M20 30L27 37L40 23" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="concept-title">3ヶ月で平均-6.1kg</h3>
+                    <p class="concept-text">
+                        男性平均：-6.4kg<br>
+                        女性平均：-5.6kg<br>
+                        パーソナルトレーニングで確実に成果を出しながら、卒業後も自分でジムでトレーニングができる知識とスキルを身につけていただきます。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section pricing-section" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">料金プラン</h2>
+                <p class="section-subtitle">あなたに最適なプランを</p>
+            </div>
+            <div class="pricing-grid">
+                <!-- Trial Training -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">体験パーソナル</h3>
+                        <p class="pricing-subtitle">初めての方におすすめ</p>
+                    </div>
+                    <div class="pricing-price">
+                        <div class="price-amount">
+                            <span class="price-currency">¥</span>
+                            <span class="price-number">3,300</span>
+                        </div>
+                        <span class="price-unit">/ 60分</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>60分パーソナルトレーニング</li>
+                        <li>完全個室</li>
+                        <li>カウンセリング込み</li>
                     </ul>
-                    <p class="text-small">まずは体験してみたい方におすすめ</p>
+                    <a href="#contact" class="btn btn-outline btn-block">体験予約</a>
                 </div>
 
-                <!-- Monthly Plans -->
-                <div class="card">
-                    <h3>月額プラン</h3>
-                    <div style="margin: 1rem 0;">
-                        <div style="margin-bottom: 0.5rem;">月4回：<strong>¥40,000</strong> <span class="text-small text-muted">(¥10,000/回)</span></div>
-                        <div style="margin-bottom: 0.5rem;">月6回：<strong>¥54,000</strong> <span class="text-small text-muted">(¥9,000/回)</span></div>
-                        <div>月8回：<strong>¥64,000</strong> <span class="text-small text-muted">(¥8,000/回)</span></div>
+                <!-- 1 Month Trial Plan - Featured -->
+                <div class="pricing-card pricing-card-featured">
+                    <div class="pricing-badge">おすすめ！</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">1ヶ月お試しプラン</h3>
+                        <p class="pricing-subtitle">まずは1ヶ月試したい方</p>
                     </div>
-                    <ul style="list-style: none; padding: 0; margin: 1rem 0;">
-                        <li><i class="fas fa-check text-success"></i> 食事指導</li>
-                        <li><i class="fas fa-check text-success"></i> オンラインサポート</li>
-                        <li><i class="fas fa-check text-success"></i> 月2回コーチングセッション</li>
+                    <div class="pricing-price">
+                        <div class="price-original">
+                            <span class="price-currency">¥</span>
+                            <span class="price-number">40,000</span>
+                        </div>
+                        <div class="price-amount price-campaign">
+                            <span class="price-currency">¥</span>
+                            <span class="price-number">30,000</span>
+                        </div>
+                        <span class="price-unit">/ 月</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>パーソナルトレーニング 4回</li>
+                        <li>食事指導</li>
+                        <li>LINEサポート</li>
+                        <li>オンラインコーチング 月1回</li>
                     </ul>
-                    <p class="text-small">継続的なサポートで確実に結果を出したい方に</p>
+                    <a href="#contact" class="btn btn-primary btn-block">今すぐ始める</a>
                 </div>
 
-                <!-- Free Consultation -->
-                <div class="card" style="border: 2px solid var(--color-accent);">
-                    <h3><i class="fas fa-gift text-accent"></i> 無料サービス</h3>
-                    <div style="margin: 1rem 0;">
-                        <div style="font-weight: var(--font-weight-semibold); margin-bottom: 0.5rem;">
-                            無料カウンセリング（オンライン）
-                        </div>
-                        <div style="font-weight: var(--font-weight-semibold);">
-                            体験セッション：¥3,300
-                        </div>
+                <!-- Monthly Plans with Tabs -->
+                <div class="pricing-card pricing-card-monthly">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">月額プラン</h3>
+                        <p class="pricing-subtitle">継続して通いたい方</p>
                     </div>
-                    <ul style="list-style: none; padding: 0; margin: 1rem 0;">
-                        <li><i class="fas fa-check text-success"></i> 目標設定</li>
-                        <li><i class="fas fa-check text-success"></i> 現状分析</li>
-                        <li><i class="fas fa-check text-success"></i> 最適プラン提案</li>
-                    </ul>
-                    <a href="https://timerex.net/s/koshi0845_8dd7/eec0f1c3" 
-                       class="btn btn-primary w-full mt-4" 
-                       target="_blank" 
-                       rel="noopener noreferrer">
-                        今すぐ予約
-                    </a>
+
+                    <!-- Plan Selector -->
+                    <div class="plan-selector">
+                        <button class="plan-tab active" data-plan="plan4">月4回</button>
+                        <button class="plan-tab" data-plan="plan6">月6回</button>
+                        <button class="plan-tab" data-plan="plan8">月8回</button>
+                    </div>
+
+                    <!-- Plan 4 -->
+                    <div class="plan-content active" data-plan-content="plan4">
+                        <div class="pricing-price">
+                            <div class="price-amount">
+                                <span class="price-currency">¥</span>
+                                <span class="price-number">40,000</span>
+                            </div>
+                            <span class="price-unit">/ 月</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>パーソナルトレーニング 4回</li>
+                            <li>食事指導</li>
+                            <li>LINEサポート</li>
+                            <li>オンラインコーチング 月1回</li>
+                        </ul>
+                    </div>
+
+                    <!-- Plan 6 -->
+                    <div class="plan-content" data-plan-content="plan6">
+                        <div class="pricing-price">
+                            <div class="price-amount">
+                                <span class="price-currency">¥</span>
+                                <span class="price-number">54,000</span>
+                            </div>
+                            <span class="price-unit">/ 月</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>パーソナルトレーニング 6回</li>
+                            <li>食事指導</li>
+                            <li>LINEサポート</li>
+                            <li>オンラインコーチング 月1回</li>
+                        </ul>
+                    </div>
+
+                    <!-- Plan 8 -->
+                    <div class="plan-content" data-plan-content="plan8">
+                        <div class="pricing-price">
+                            <div class="price-amount">
+                                <span class="price-currency">¥</span>
+                                <span class="price-number">64,000</span>
+                            </div>
+                            <span class="price-unit">/ 月</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>パーソナルトレーニング 8回</li>
+                            <li>食事指導</li>
+                            <li>LINEサポート</li>
+                            <li>オンラインコーチング 月1回</li>
+                        </ul>
+                    </div>
+
+                    <a href="#service" class="btn btn-outline btn-block">詳しく見る</a>
                 </div>
             </div>
-            
-            <div class="text-center mt-8">
-                <a href="services.html" class="btn btn-secondary btn-large">
-                    詳しいサービス内容を見る
-                </a>
+
+            <!-- Single Session -->
+            <div class="single-session">
+                <h4 class="single-session-label">単発プラン</h4>
+                <div class="single-session-content">
+                    <div class="single-session-info">
+                        <h5 class="single-session-title">単発パーソナル</h5>
+                        <p class="single-session-text">トレーニングのみの都度払いプラン</p>
+                        <p class="single-session-note">※日常的なサポートは含まれません</p>
+                    </div>
+                    <div class="single-session-price">
+                        <span class="price-currency">¥</span>
+                        <span class="price-number">8,000</span>
+                        <span class="price-unit">/ 回</span>
+                    </div>
+                    <a href="#contact" class="btn btn-outline">予約する</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Methods Section -->
-    <section class="section" style="background-color: var(--bg-secondary);">
+    <!-- Service Details Section -->
+    <section class="section service-section" id="service">
         <div class="container">
-            <h2 class="text-center mb-8">お問い合わせ方法</h2>
-            <div class="contact-grid">
-                <!-- Instagram -->
-                <div class="contact-card">
-                    <div class="contact-icon instagram">
-                        <i class="fab fa-instagram"></i>
-                    </div>
-                    <h3>Instagram</h3>
-                    <p>日々のトレーニング風景やフィットネスのヒントを投稿。DMでお気軽にご質問ください。</p>
-                    <div class="qr-code">
-                        <img src="./img/instagram_qr.png" alt="Instagram QRコード">
-                    </div>
-                    <a href="https://www.instagram.com/atsuya_koshida/" 
-                       class="btn btn-secondary w-full" 
-                       target="_blank" 
-                       rel="noopener noreferrer">
-                        <i class="fab fa-instagram"></i>
-                        InstagramでDM
-                    </a>
+            <div class="section-header">
+                <h2 class="section-title">月額プランのサービス内容</h2>
+                <p class="section-subtitle">充実のサポートで、あなたの目標達成を全面的にバックアップ</p>
+            </div>
+            <div class="service-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-button active" data-tab="training">
+                        <!-- <span class="tab-icon">💪</span> -->
+                        <span class="tab-text">パーソナルトレーニング</span>
+                    </button>
+                    <button class="tab-button" data-tab="nutrition">
+                        <!-- <span class="tab-icon">🍽️</span> -->
+                        <span class="tab-text">食事指導</span>
+                    </button>
+                    <button class="tab-button" data-tab="support">
+                        <!-- <span class="tab-icon">📱</span> -->
+                        <span class="tab-text">公式LINEでのオンラインサポート</span>
+                    </button>
+                    <button class="tab-button" data-tab="coaching">
+                        <!-- <span class="tab-icon">🎯</span> -->
+                        <span class="tab-text">コーチング</span>
+                    </button>
                 </div>
-
-                <!-- LINE -->
-                <div class="contact-card">
-                    <div class="contact-icon line">
-                        <i class="fab fa-line"></i>
+                <div class="tab-contents">
+                    <div class="tab-content active" data-content="training">
+                        <div class="service-detail">
+                            <div class="service-image">
+                                <img src="images/personal_1.jpg" alt="パーソナルトレーニング">
+                            </div>
+                            <div class="service-text">
+                                <h3>パーソナルトレーニング</h3>
+                                <p>
+                                    1回あたり60分の完全個室マンツーマントレーニング。<br>
+                                    あなたの目標・体力レベルに合わせて、最適なプログラムを設計します。<br>
+                                </p>
+                                <ul class="service-list">
+                                    <li>科学的根拠に基づいたプログラム設計</li>
+                                    <li>正しいフォームの徹底指導</li>
+                                    <li>怪我のリスクを最小限に</li>
+                                    <li>効率的に結果を出す</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <h3>公式LINE</h3>
-                    <p>より詳しいご相談や無料カウンセリングのご予約は公式LINEが便利です。</p>
-                    <div class="qr-code">
-                        <img src="./img/line_qr.png" alt="LINE QRコード">
+                    <div class="tab-content" data-content="nutrition">
+                        <div class="service-detail">
+                            <div class="service-image">
+                                <img src="images/nutrition.jpg" alt="食事指導">
+                            </div>
+                            <div class="service-text">
+                                <h3>食事指導</h3>
+                                <p>
+                                    トレーニングは週に1〜2回ですが、食事は毎日。<br>
+                                    身体を変えるには、食事の改善が不可欠です。月額プランでは、無理なく続けられる食事法を指導します。
+                                </p>
+                                <ul class="service-list">
+                                    <li>無理な制限はしない持続可能な食事法</li>
+                                    <li>LINEで毎日の食事をサポート</li>
+                                    <li>外食・コンビニでも対応できる知識</li>
+                                    <li>一生使える食事の知識が身につく</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <a href="https://lin.ee/PDSiJrJ" 
-                       class="btn btn-secondary w-full" 
-                       target="_blank" 
-                       rel="noopener noreferrer">
-                        <i class="fab fa-line"></i>
-                        LINEでメッセージ
-                    </a>
-                </div>
-
-                <!-- Direct Booking -->
-                <div class="contact-card" style="border: 2px solid var(--color-accent);">
-                    <div class="contact-icon primary">
-                        <i class="fas fa-calendar-alt"></i>
+                    <div class="tab-content" data-content="support">
+                        <div class="service-detail">
+                            <div class="service-image">
+                                <img src="images/chat.jpg" alt="オンラインサポート">
+                            </div>
+                            <div class="service-text">
+                                <h3>公式LINEでのオンラインサポート</h3>
+                                <p>
+                                    困った時、迷った時、いつでも相談できる環境を提供。<br>
+                                    どんな事でもご相談ください。<br>
+                                    トレーニング日以外も、あなたの日常をサポートします。
+                                </p>
+                                <ul class="service-list">
+                                    <li>24時間以内に必ず返信</li>
+                                    <li>食事の相談・質問対応</li>
+                                    <li>トレーニングメニューの提案</li>
+                                    <li>モチベーション管理</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <h3>無料カウンセリング</h3>
-                    <p><strong>2時間・完全無料・オンライン</strong></p>
-                    <p>目標と現状を詳しくお聞きし、最適なプランをご提案します。</p>
-                    <div style="margin: 1rem 0; padding: 1rem; background: var(--color-gray-50); border-radius: var(--radius-md);">
-                        <i class="fas fa-clock text-accent"></i> 24時間いつでも予約可能<br>
-                        <i class="fas fa-check text-success"></i> 即座に確定
+                    <div class="tab-content" data-content="coaching">
+                        <div class="service-detail">
+                            <div class="service-image">
+                                <img src="images/online.jpg" alt="コーチング">
+                            </div>
+                            <div class="service-text">
+                                <h3>オンラインコーチング</h3>
+                                <p>
+                                    チャットでは聞きづらいことも、60分のオンラインセッションでしっかりサポート。<br>
+                                    あなたが自ら変わり続けられるよう、マインドセットから生活習慣全体の最適化まで支援します。
+                                </p>
+                                <ul class="service-list">
+                                    <li>目標と現状のギャップを明確化</li>
+                                    <li>継続するためのマインドセット構築</li>
+                                    <li>生活習慣全体の最適化</li>
+                                    <li>卒業後も続けられる仕組みづくり</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <a href="https://timerex.net/s/koshi0845_8dd7/eec0f1c3" 
-                       class="btn btn-primary w-full pulse" 
-                       target="_blank" 
-                       rel="noopener noreferrer">
-                        今すぐ予約する
-                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Trust Indicators Section -->
-    <section class="section">
+    <!-- Trainer Profile Section -->
+    <section class="section trainer-section" id="trainer">
         <div class="container">
-            <div class="card" style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <h2 class="mb-6">安心してお任せください</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
-                    <div>
-                        <div style="font-size: var(--font-size-3xl); color: var(--color-accent); margin-bottom: 0.5rem;">
-                            <i class="fas fa-certificate"></i>
-                        </div>
-                        <h4>NSCA-CPT認定</h4>
-                        <p class="text-small">国際的に認められた資格保有</p>
+            <div class="section-header">
+                <h2 class="section-title">トレーナー紹介</h2>
+                <p class="section-subtitle">Trainer Profile</p>
+            </div>
+            <div class="trainer-profile">
+                <div class="trainer-image">
+                    <img src="images/profile.jpg" alt="越田敦也">
+                </div>
+                <div class="trainer-info">
+                    <h3 class="trainer-name">越田 敦也<span class="trainer-name-en">Atsuya Koshida</span></h3>
+                    <p class="trainer-title">パーソナルトレーナー</p>
+                    <div class="trainer-badges">
+                        <span class="badge">NSCA-CPT</span>
                     </div>
-                    <div>
-                        <div style="font-size: var(--font-size-3xl); color: var(--color-success); margin-bottom: 0.5rem;">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <h4>毎日営業</h4>
-                        <p class="text-small">7:00-22:00 毎日対応</p>
+                    <div class="trainer-description">
+                        <p>
+                            「一時的な変化ではなく、一生続けられる習慣を」
+                        </p>
+                        <p>
+                            国際的に認められたNSCA-CPT資格を保有し、科学的根拠に基づいた指導を提供。
+                            運動初心者から上級者まで、一人ひとりに最適なプログラムを設計します。
+                        </p>
                     </div>
-                    <div>
-                        <div style="font-size: var(--font-size-3xl); color: var(--color-accent); margin-bottom: 0.5rem;">
-                            <i class="fas fa-map-marker-alt"></i>
+                    <!-- <div class="trainer-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">300+</span>
+                            <span class="stat-label">サポート実績</span>
                         </div>
-                        <h4>幅広いエリア</h4>
-                        <p class="text-small">東京・埼玉の完全個室ジム</p>
+                        <div class="stat-item">
+                            <span class="stat-number">7年</span>
+                            <span class="stat-label">経験年数</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">継続率</span>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Voice Section -->
+    <section class="section voice-section" id="voice">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">お客様の声</h2>
+                <p class="section-subtitle">実際に変化を実感された方々</p>
+            </div>
+            <div class="voice-carousel">
+                <div class="carousel-container">
+                    <button class="carousel-button carousel-button-prev" aria-label="前へ">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="carousel-track">
+                        <div class="voice-card">
+                            <div class="voice-header">
+                                <div class="voice-avatar">M.S</div>
+                                <div class="voice-meta">
+                                    <p class="voice-name">M.Sさん（32歳・女性）</p>
+                                    <p class="voice-period">3ヶ月プラン</p>
+                                </div>
+                            </div>
+                            <div class="voice-rating">★★★★★</div>
+                            <p class="voice-text">
+                                「ジムに通っても続かなかった私が、3ヶ月で-8kg達成！<br>
+                                食事制限が厳しいイメージでしたが、無理なく続けられる方法を教えてもらいました。<br>
+                                今では自分でトレーニングメニューを組めるようになり、卒業後も継続できています。」
+                            </p>
+                            <button class="voice-read-more">もっと見る</button>
+                            <div class="voice-result">
+                                <span class="result-item">体重 -8kg</span>
+                                <span class="result-item">体脂肪率 -5%</span>
+                            </div>
+                        </div>
+                        <div class="voice-card">
+                            <div class="voice-header">
+                                <div class="voice-avatar">T.K</div>
+                                <div class="voice-meta">
+                                    <p class="voice-name">T.Kさん（28歳・男性）</p>
+                                    <p class="voice-period">6ヶ月プラン</p>
+                                </div>
+                            </div>
+                            <div class="voice-rating">★★★★★</div>
+                            <p class="voice-text">
+                                「デスクワークで運動経験ゼロでしたが、基礎から丁寧に教えてもらえました。<br>
+                                LINEでの食事サポートが特に良かったです。外食が多い自分でも無理なく続けられました。<br>
+                                今では週2回のジム通いが習慣になっています！」
+                            </p>
+                            <button class="voice-read-more">もっと見る</button>
+                            <div class="voice-result">
+                                <span class="result-item">体重 -12kg</span>
+                                <span class="result-item">筋肉量 +3kg</span>
+                            </div>
+                        </div>
+                        <div class="voice-card">
+                            <div class="voice-header">
+                                <div class="voice-avatar">A.Y</div>
+                                <div class="voice-meta">
+                                    <p class="voice-name">A.Yさん（45歳・女性）</p>
+                                    <p class="voice-period">4ヶ月プラン</p>
+                                </div>
+                            </div>
+                            <div class="voice-rating">★★★★★</div>
+                            <p class="voice-text">
+                                「40代で体型が崩れ始め、何をしても変わらなかった私。<br>
+                                でも越田さんのトレーニングで、20代の頃の体型に戻れました！<br>
+                                コーチングで生活習慣全体を見直せたことが大きかったです。」
+                            </p>
+                            <button class="voice-read-more">もっと見る</button>
+                            <div class="voice-result">
+                                <span class="result-item">体重 -6kg</span>
+                                <span class="result-item">ウエスト -10cm</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-button carousel-button-next" aria-label="次へ">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="carousel-dots"></div>
+            </div>
+
+            <!-- Before/After Section -->
+            <div class="before-after-section">
+                <h3 class="before-after-title">ビフォーアフター</h3>
+                <div class="before-after-grid">
+                    <div class="before-after-card">
+                        <div class="comparison-grid">
+                            <div class="comparison-item">
+                                <img src="images/before1.jpg" alt="ビフォー">
+                                <span class="comparison-label">Before</span>
+                            </div>
+                            <div class="comparison-item">
+                                <img src="images/after1.jpg" alt="アフター">
+                                <span class="comparison-label">After</span>
+                            </div>
+                        </div>
+                        <p class="comparison-text">3ヶ月で-9.6kg</p>
                     </div>
                 </div>
-                <div style="background: var(--color-gray-50); padding: 1.5rem; border-radius: var(--radius-lg);">
-                    <p><strong>対応エリア：</strong>渋谷・恵比寿・中目黒・新宿・新宿御苑・池袋・川越・南浦和</p>
-                    <p class="text-small text-muted">※上記以外のエリアもご相談可能</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">よくある質問</h2>
+                <p class="section-subtitle">FAQ</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>運動経験がなくても大丈夫ですか?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            もちろん大丈夫です。むしろ、運動初心者の方こそパーソナルトレーニングがおすすめです。
+                            正しいフォームを最初から身につけることで、怪我のリスクを減らし、効率的に結果を出すことができます。
+                            一人ひとりの体力レベルに合わせて、無理のないプログラムを組みますのでご安心ください。
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>食事制限は厳しいですか?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            基本に忠実に、無理のない範囲で行います。リバウンドを防ぐためにも、極端な食事制限は推奨していません。
+                            一時的な我慢ではなく、一生使える食事の知識を身につけることを目指します。
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>月の途中から始められますか?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            はい、いつでも始められます。「思い立った時が始め時」ですので、まずは無料カウンセリングでご相談ください。
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>プラン変更は可能ですか?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            可能です。まずは1ヶ月お試しプランで始めて、継続したい場合は月契約プランに変更することもできます。
+                            また、忙しくなった場合は頻度を減らすことも相談できますので、柔軟に対応いたします。
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>どのくらいで結果が出ますか?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            個人差はありますが、多くの方が2ヶ月程で体の変化を実感されています。<br>
+                            ただし、「結果を出すこと」以上に「続けられる習慣をつくること」を重視しています。<br>
+                            もちろん結果を出すために全力でサポートしますが、一生続けられる習慣を身につけることが最終目標です。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Access Section -->
+    <section class="section access-section" id="access">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">アクセス・対応エリア</h2>
+                <p class="section-subtitle">Access Information</p>
+            </div>
+            <div class="access-content">
+                <div class="access-info">
+                    <div class="info-item">
+                        <h3 class="info-title">営業時間</h3>
+                        <p class="info-text">7:00 - 22:00（毎日対応）</p>
+                    </div>
+                    <div class="info-item">
+                        <h3 class="info-title">対応エリア</h3>
+                        <div class="area-list">
+                            <span class="area-tag">渋谷</span>
+                            <span class="area-tag">恵比寿</span>
+                            <span class="area-tag">中目黒</span>
+                            <span class="area-tag">新宿</span>
+                            <span class="area-tag">池袋</span>
+                            <span class="area-tag">川越</span>
+                            <span class="area-tag">南浦和</span>
+                        </div>
+                        <p class="info-note">※上記以外のエリアも相談可能です。お気軽にお問い合わせください。</p>
+                    </div>
+                    <div class="info-item">
+                        <h3 class="info-title">施設</h3>
+                        <ul class="facility-list">
+                            <li>完全個室ジム</li>
+                            <li>シューズ貸出</li>
+                            <li>駅徒歩5分</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/CTA Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">無料カウンセリング</h2>
+                <p class="section-subtitle">完全無料・オンライン</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-benefits">
+                    <h3 class="benefits-title">カウンセリングでわかること</h3>
+                    <ul class="benefits-list">
+                        <li>あなたの目標達成までの具体的なロードマップ</li>
+                        <li>現状の課題と改善ポイント</li>
+                        <li>最適なトレーニング頻度と食事法</li>
+                        <li>あなたに合ったプランのご提案</li>
+                    </ul>
+                    <p class="benefits-note">
+                        ※無理な勧誘は一切ございません。まずはお話を聞かせてください。
+                    </p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="#" class="contact-btn contact-btn-line" id="lineButton">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+                        </svg>
+                        <div>
+                            <span class="contact-btn-label">LINE公式アカウント</span>
+                            <span class="contact-btn-text">友達追加で今すぐ相談</span>
+                        </div>
+                    </a>
+                    <a href="#" class="contact-btn contact-btn-instagram" id="instagramButton">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                        <div>
+                            <span class="contact-btn-label">Instagram</span>
+                            <span class="contact-btn-text">DMで気軽に質問</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -285,40 +709,38 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Personal Training</h3>
-                    <p>人生最後のパーソナルトレーニング</p>
-                    <p>基本に忠実なトレーニングで、一生使える身体の使い方を学ぶ</p>
+                <div class="footer-logo">
+                    <span class="logo-text">KOSHIDA<span class="logo-accent">PT</span></span>
                 </div>
-                <div class="footer-section">
-                    <h4>ナビゲーション</h4>
-                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                        <a href="index.html">ホーム</a>
-                        <a href="services.html">サービス</a>
-                        <a href="contact.html">お問い合わせ</a>
-                    </div>
+                <nav class="footer-nav">
+                    <a href="#concept">コンセプト</a>
+                    <a href="#pricing">料金プラン</a>
+                    <a href="#service">サービス</a>
+                    <a href="#trainer">トレーナー</a>
+                    <a href="#voice">お客様の声</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#contact">お問い合わせ</a>
+                </nav>
+                <div class="footer-links">
+                    <a href="#privacy">プライバシーポリシー</a>
+                    <a href="#terms">利用規約</a>
                 </div>
-                <div class="footer-section">
-                    <h4>お問い合わせ</h4>
-                    <p>Email: atsuya.koshida@gmail.com</p>
-                    <p>営業時間: 7:00-22:00 毎日</p>
-                    <div style="margin-top: 1rem;">
-                        <a href="https://www.instagram.com/atsuya_koshida/" target="_blank" rel="noopener noreferrer" style="margin-right: 1rem;">
-                            <i class="fab fa-instagram" style="font-size: 1.5rem;"></i>
-                        </a>
-                        <a href="https://lin.ee/PDSiJrJ" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-line" style="font-size: 1.5rem;"></i>
-                        </a>
-                    </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Koshida Personal Training. All Rights Reserved.</p>
                 </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 越田敦也 Personal Training. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="./assets/js/main.js"></script>
+    <!-- Floating CTA Button -->
+    <a href="#contact" class="floating-cta" id="floatingCta">
+        <span class="floating-cta-text">無料相談</span>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
